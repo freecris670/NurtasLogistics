@@ -274,7 +274,7 @@ nav ul li a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Устанавливаем 2 колонки равной ширины */
     gap: 30px;
     margin-bottom: 50px;
 }
@@ -596,4 +596,17 @@ nav ul li a {
     .map-container {
         height: 300px;
     }
+}
+
+/* Header Logo Fix */
+.logo img {
+    height: 50px; /* Задаем фиксированную высоту */
+    width: auto;  /* Ширина подстроится автоматически для сохранения пропорций */
+    display: block; /* Убирает возможные нижние отступы у inline-элементов */
+    object-fit: contain; /* Гарантирует, что все изображение будет видно */
+}
+
+/* Увеличиваем отступ под заголовком "О нас" */
+.about-section h2 {
+    margin-bottom: 60px; /* Или другое значение, например 50px, 70px, по вашему усмотрению */
 }
