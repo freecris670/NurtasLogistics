@@ -14,10 +14,7 @@
         <div class="container">
             <div class="logo">
                 <a href="#hero">
-                    <svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 15 L40 15 L40 35 L10 35 Z" fill="#144887"/>
-                        <text x="55" y="30" font-family="Arial" font-weight="bold" font-size="24" fill="#144887">SmartBuh</text>
-                    </svg>
+                    <img src="{{ url_for('static', filename='images/smartbuh-logo.svg') }}" alt="SmartBuh" width="50" height="50">
                 </a>
             </div>
             <nav>
@@ -91,6 +88,11 @@
                         <h3>Автоматизация</h3>
                         <p>Современные решения для учета</p>
                     </div>
+                    <div class="advantage">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 доступность</h3>
+                        <p>Круглосуточная поддержка для вашего бизнеса</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,42 +102,80 @@
     <section id="services" class="services-section">
         <div class="container">
             <h2>Наши услуги</h2>
+            <p class="services-description">Предоставляем полный спектр бухгалтерских услуг для вашего бизнеса. От ведения учета до консультаций по налоговой отчетности.</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-calculator"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Бухгалтерские услуги в 1С</h3>
-                    <p>Ведение бухгалтерского учета, зарплата и кадры, основные средства, внешнеэкономическая деятельность</p>
-                    <div class="service-offer">
-                        <span class="offer-tag">Скидка 50% на первый месяц</span>
+                    <h3>Услуги в 1С</h3>
+                    <p>Полное ведение учёта, зарплата и управление персоналом, основные средства, внешнеэкономическая деятельность и восстановление учёта.</p>
+                    <div class="service-offers">
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-percent"></i></span>
+                            <span class="offer-text">Скидка 50% на первый месяц</span>
+                        </div>
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-gift"></i></span>
+                            <span class="offer-text">Год 1С Fresh в подарок</span>
+                        </div>
                     </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Восстановление учета</h3>
-                    <p>Полное восстановление бухгалтерского и налогового учета для вашего бизнеса</p>
-                    <div class="service-offer">
-                        <span class="offer-tag">Год 1С Fresh в подарок</span>
-                    </div>
+                    <button class="calculate-button">Рассчитать стоимость</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3>Разовые консультации</h3>
-                    <p>Консультации по учетной политике, налоговой отчетности (формы 910.00–300.00)</p>
-                    <div class="service-offer">
-                        <span class="offer-tag">Персональный ассистент</span>
+                    <p>Профессиональные консультации по учётной политике, налоговой отчётности формы 910.00-300.00 и другим вопросам.</p>
+                    <div class="service-offers">
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-percent"></i></span>
+                            <span class="offer-text">Скидка 50% на первый месяц</span>
+                        </div>
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-gift"></i></span>
+                            <span class="offer-text">Год 1С Fresh в подарок</span>
+                        </div>
                     </div>
+                    <button class="calculate-button">Рассчитать стоимость</button>
                 </div>
-            </div>
-            <div class="service-format">
-                <h3>Формат сотрудничества</h3>
-                <p>Преимущественно онлайн-аутсорсинг с возможностью выезда специалиста по необходимости</p>
-                <button class="cta-button">Заключить договор</button>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Онлайн-аутсорсинг</h3>
+                    <p>Удалённое ведение бухгалтерии с возможностью выезда специалиста при необходимости.</p>
+                    <div class="service-offers">
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-percent"></i></span>
+                            <span class="offer-text">Скидка 50% на первый месяц</span>
+                        </div>
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-gift"></i></span>
+                            <span class="offer-text">Год 1С Fresh в подарок</span>
+                        </div>
+                    </div>
+                    <button class="calculate-button">Рассчитать стоимость</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Персональный ассистент</h3>
+                    <p>Вы получаете персонального бухгалтера, который доступен для консультаций в рабочее время.</p>
+                    <div class="service-offers">
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-percent"></i></span>
+                            <span class="offer-text">Скидка 50% на первый месяц</span>
+                        </div>
+                        <div class="offer-item">
+                            <span class="offer-icon"><i class="fas fa-gift"></i></span>
+                            <span class="offer-text">Год 1С Fresh в подарок</span>
+                        </div>
+                    </div>
+                    <button class="calculate-button">Рассчитать стоимость</button>
+                </div>
             </div>
         </div>
     </section>

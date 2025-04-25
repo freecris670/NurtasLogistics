@@ -43,22 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Header scroll behavior
+    // Fixed header that doesn't hide when scrolling
     const header = document.getElementById('header');
-    let lastScrollTop = 0;
     
     window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scroll down
-            header.style.transform = 'translateY(-100%)';
+        // Always keep header visible, just add a background color when scrolled
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
         } else {
-            // Scroll up
-            header.style.transform = 'translateY(0)';
+            header.classList.remove('scrolled');
         }
-        
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
     // Initialize Yandex Map
@@ -70,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mapElement) {
             const myMap = new ymaps.Map('yandex-map', {
                 center: [43.238949, 76.945327], // Almaty coordinates
-                zoom: 16,
+                zoom: 14, // Reduced zoom level to show more of the surrounding area
                 controls: ['zoomControl', 'fullscreenControl']
             });
             
@@ -90,12 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 myMap.geoObjects.add(placemark);
                 myMap.setCenter(coords);
-                
-                // Fit map to show placemark
-                myMap.setBounds(myMap.geoObjects.getBounds(), {
-                    checkZoomRange: true,
-                    zoomMargin: 30
-                });
             });
         }
     }
@@ -124,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkIfInView);
     checkIfInView();
 
-    // Handle CTA buttons
-    const ctaButtons = document.querySelectorAll('.cta-button');
+    // Handle CTA buttons and Calculate buttons
+    const ctaButtons = document.querySelectorAll('.cta-button, .calculate-button');
     
     ctaButtons.forEach(button => {
         button.addEventListener('click', function() {

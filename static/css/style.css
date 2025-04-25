@@ -121,6 +121,11 @@ section {
     box-shadow: var(--shadow);
     z-index: 1000;
     padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 #header .container {
@@ -259,6 +264,14 @@ nav ul li a {
     background-color: var(--gray-color);
 }
 
+.services-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -277,10 +290,12 @@ nav ul li a {
     height: 100%;
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--border-color);
 }
 
 .service-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon {
@@ -289,36 +304,52 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.service-offer {
+.service-offers {
     margin-top: auto;
-    padding-top: 15px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border-color);
+    margin-bottom: 20px;
 }
 
-.offer-tag {
-    display: inline-block;
+.offer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.offer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
     background-color: var(--accent-color);
     color: var(--light-color);
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.85rem;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 0.7rem;
+}
+
+.offer-text {
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
-.service-format {
-    text-align: center;
-    margin-top: 50px;
-    padding: 30px;
-    background-color: var(--light-color);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+.calculate-button {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
 }
 
-.service-format h3 {
-    margin-bottom: 15px;
-}
-
-.service-format p {
-    margin-bottom: 20px;
+.calculate-button:hover {
+    background-color: #e05a00;
 }
 
 /* Cases Section */
