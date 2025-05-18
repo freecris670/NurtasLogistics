@@ -16,6 +16,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    const calculateButtons = document.querySelectorAll('.calculate-button, button.cta-button');
+
+    calculateButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Get the contacts section
+            const contactsSection = document.querySelector('#contacts');
+
+            if (contactsSection) {
+                const headerHeight = document.getElementById('header').offsetHeight;
+                const targetPosition = contactsSection.offsetTop - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Remove the alert that was showing before
+            // (commented out the existing alert in the ctaButtons handler)
+        });
+    });
+
+    
     // Smooth scroll for navigation links
     const navLinks = document.querySelectorAll('nav a, .footer-nav a');
     
@@ -64,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mapElement) {
             const myMap = new ymaps.Map('yandex-map', {
                 center: [43.238949, 76.945327], // Almaty coordinates
-                zoom: 14, // Reduced zoom level to show more of the surrounding area
+                zoom: 16, // Reduced zoom level to show more of the surrounding area
                 controls: ['zoomControl', 'fullscreenControl']
             });
             
@@ -111,15 +136,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for elements in view on load and scroll
     window.addEventListener('scroll', checkIfInView);
     checkIfInView();
-
-    // Handle CTA buttons and Calculate buttons
-    const ctaButtons = document.querySelectorAll('.cta-button, .calculate-button');
-    
-    ctaButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // In a real scenario, this would open a form or initiate contact
-            // For this example, we'll just show an alert
-            alert('Спасибо за интерес! В полной версии сайта здесь будет форма связи. Пожалуйста, свяжитесь с нами по телефону +7 707 314-65-64 или email: smart_buh_kz@mail.ru');
-        });
-    });
 });

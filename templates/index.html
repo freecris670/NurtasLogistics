@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartBuh - Бухгалтерские услуги в Алматы | Аутсорсинг бухгалтерии</title>
+    <title>Грузоперевозки в Алматы</title>
     <meta name="description" content="Профессиональные бухгалтерские услуги в Алматы. Ведение учёта, консультации, 1С. Первый месяц бесплатно! 1С Fresh в подарок при заключении договора.">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{{ url_for('static', filename='images/smartbuh-logo.png') }}" type="image/png">
 </head>
 <body>
     <!-- Header -->
@@ -14,7 +15,8 @@
         <div class="container">
             <div class="logo">
                 <a href="#hero">
-                    <img src="{{ url_for('static', filename='images/smartbuh-logo.svg') }}" alt="SmartBuh">
+                    <img src="{{ url_for('static', filename='images/smartbuh-logo.png') }}" alt="SmartBuh">
+                    <span class="logo-text">SmartBuh</span>
                 </a>
             </div>
             <nav>
@@ -42,20 +44,20 @@
     <section id="hero" class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Профессиональные бухгалтерские услуги в Алматы</h1>
-                <p>Доверьте учет профессионалам и сосредоточьтесь на развитии своего бизнеса</p>
+                <h1>Перевозка любых грузов по Алматы за 8 часов</h1>
+                <p>Быстрая и надежная доставка для вашего бизнеса</p>
                 <div class="hero-features">
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
-                        <span>Первый месяц бесплатно</span>
+                        <span>Опыт 5 лет</span>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
-                        <span>1С Fresh в подарок</span>
+                        <span>Работа по Алмате и пригородам</span>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
-                        <span>Персональный ассистент</span>
+                        <span>Работаем чисто, без грязи</span>
                     </div>
                 </div>
                 <button class="cta-button">Рассчитать стоимость</button>
@@ -68,30 +70,21 @@
         <div class="container">
             <h2>О нас</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>ТОО "SMARTBUH" — это команда профессиональных бухгалтеров и финансовых консультантов, специализирующихся на предоставлении качественных бухгалтерских услуг для микро- и малого бизнеса в Алматы.</p>
-                    <p>Наша миссия — помогать предпринимателям экономить время, снижать налоговые риски и автоматизировать учет, предоставляя доступные и понятные решения для бизнеса.</p>
-                </div>
                 <div class="about-advantages">
                     <div class="advantage">
                         <i class="fas fa-clock"></i>
-                        <h3>Экономия времени</h3>
-                        <p>Освободите время для развития бизнеса</p>
+                        <h3>5+ лет опыта</h3>
+                        <p>Аккуратные грузчики</p>
                     </div>
                     <div class="advantage">
                         <i class="fas fa-shield-alt"></i>
-                        <h3>Снижение рисков</h3>
-                        <p>Минимизация налоговых и финансовых рисков</p>
+                        <h3>Вся территория</h3>
+                        <p>Работаем по всему Алматы и пригородам</p>
                     </div>
                     <div class="advantage">
                         <i class="fas fa-robot"></i>
-                        <h3>Автоматизация</h3>
-                        <p>Современные решения для учета</p>
-                    </div>
-                    <div class="advantage">
-                        <i class="fas fa-headset"></i>
-                        <h3>24/7 доступность</h3>
-                        <p>Круглосуточная поддержка для вашего бизнеса</p>
+                        <h3>Современный автопарк</h3>
+                        <p>Машины разной грузоподъемности</p>
                     </div>
                 </div>
             </div>
@@ -102,14 +95,13 @@
     <section id="services" class="services-section">
         <div class="container">
             <h2>Наши услуги</h2>
-            <p class="services-description">Предоставляем полный спектр бухгалтерских услуг для вашего бизнеса. От ведения учета до консультаций по налоговой отчетности.</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-truck"></i>
                     </div>
-                    <h3>Услуги в 1С</h3>
-                    <p>Полное ведение учёта, зарплата и управление персоналом, основные средства, внешнеэкономическая деятельность и восстановление учёта.</p>
+                    <h3>Перевозка грузов за 8 часов</h3>
+                    <p>Быстрая доставка по городу</p>
                     <div class="service-offers">
                         <div class="offer-item">
                             <span class="offer-icon"><i class="fas fa-percent"></i></span>
@@ -124,10 +116,10 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-comments"></i>
+                        <i class="fas fa-trash"></i>
                     </div>
-                    <h3>Разовые консультации</h3>
-                    <p>Профессиональные консультации по учётной политике, налоговой отчётности формы 910.00-300.00 и другим вопросам.</p>
+                    <h3>Вывоз мусора</h3>
+                    <p>Уборка и вывоз строительного мусора</p>
                     <div class="service-offers">
                         <div class="offer-item">
                             <span class="offer-icon"><i class="fas fa-percent"></i></span>
@@ -142,10 +134,10 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-globe"></i>
+                        <i class="fas fa-people-carry"></i>
                     </div>
-                    <h3>Онлайн-аутсорсинг</h3>
-                    <p>Удалённое ведение бухгалтерии с возможностью выезда специалиста при необходимости.</p>
+                    <h3>Услуги грузчиков</h3>
+                    <p>Профессиональные грузчики</p>
                     <div class="service-offers">
                         <div class="offer-item">
                             <span class="offer-icon"><i class="fas fa-percent"></i></span>
@@ -154,24 +146,6 @@
                         <div class="offer-item">
                             <span class="offer-icon"><i class="fas fa-gift"></i></span>
                             <span class="offer-text">Бесплатная консультация перед началом работ</span>
-                        </div>
-                    </div>
-                    <button class="calculate-button">Рассчитать стоимость</button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3>Персональный ассистент</h3>
-                    <p>Вы получаете персонального бухгалтера, который доступен для консультаций в рабочее время.</p>
-                    <div class="service-offers">
-                        <div class="offer-item">
-                            <span class="offer-icon"><i class="fas fa-percent"></i></span>
-                            <span class="offer-text">От 50 000 ₸</span>
-                        </div>
-                        <div class="offer-item">
-                            <span class="offer-icon"><i class="fas fa-gift"></i></span>
-                            <span class="offer-text">Скидка 50% на первый месяц</span>
                         </div>
                     </div>
                     <button class="calculate-button">Рассчитать стоимость</button>
@@ -187,7 +161,7 @@
             <div class="cases-grid">
                 <div class="case-card">
                     <div class="case-content">
-                        <h3>ИП "Сервис Плюс"</h3>
+                        <h3>ТОО "АлматыТрейд"</h3>
                         <p>Компания по ремонту бытовой техники</p>
                         <ul class="case-results">
                             <li>Снижение налоговой нагрузки на 17%</li>
@@ -195,23 +169,23 @@
                             <li>Экономия времени владельца: 15 часов/неделю</li>
                         </ul>
                         <div class="testimonial">
-                            <p>"SmartBuh помогли нам оптимизировать расходы и наладить эффективный учет. Теперь мы спокойны за нашу бухгалтерию и налоги."</p>
-                            <div class="testimonial-author">Азамат К., директор</div>
+                            <p>"Отличный сервис, быстрая доставка"</p>
+                            <div class="testimonial-author">ТОО "АлматыТрейд"</div>
                         </div>
                     </div>
                 </div>
                 <div class="case-card">
                     <div class="case-content">
-                        <h3>ТОО "АлматыТранс"</h3>
-                        <p>Транспортная компания</p>
+                        <h3>Магазин "Светлый"</h3>
+                        <p>Новый магазин</p>
                         <ul class="case-results">
                             <li>Автоматизация учета с помощью 1С</li>
                             <li>Восстановление учета за предыдущие 2 года</li>
                             <li>Успешное прохождение налоговой проверки</li>
                         </ul>
                         <div class="testimonial">
-                            <p>"Благодаря SmartBuh мы смогли навести порядок в учете и успешно пройти налоговую проверку. Рекомендую!"</p>
-                            <div class="testimonial-author">Гульнара Т., финансовый директор</div>
+                            <p>"Надежные грузчики, вежливый персонал"</p>
+                            <div class="testimonial-author">Магазин "Светлый"</div>
                         </div>
                     </div>
                 </div>
@@ -276,15 +250,14 @@
                         <i class="fas fa-phone-alt"></i>
                         <div>
                             <h3>Телефоны</h3>
-                            <p><a href="tel:+77073146564">+7 707 314-65-64</a></p>
-                            <p><a href="tel:+77273942272">+7 727 394-22-72</a></p>
+                            <p><a href="tel:+77777777777">+7 (777) 777-77-77</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p><a href="mailto:smart_buh_kz@mail.ru">smart_buh_kz@mail.ru</a></p>
+                            <p><a href="mailto:info@cargo.kz">info@cargo.kz</a></p>
                         </div>
                     </div>
                 </div>
@@ -294,6 +267,8 @@
             </div>
         </div>
     </section>
+    </modified_html>
+    <explanation>
 
     <!-- Footer -->
     <footer class="footer">
@@ -301,9 +276,9 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>Реквизиты компании</h3>
-                    <p>ТОО "SMARTBUH"</p>
-                    <p>БИН: 210240003341</p>
-                    <p>Юр. адрес: г. Алматы, ул. Сатпаева, 76</p>
+                    <p>ТОО "BEST LOGISTICS"</p>
+                    <p>БИН: 0123456789</p>
+                    <p>Адрес: г. Алматы, ул. Сатпаева, 76</p>
                 </div>
                 <div class="footer-nav">
                     <ul>
@@ -316,7 +291,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 ТОО "SmartBuh". Все права защищены.</p>
+                <p>&copy; 2025 ТОО "BEST LOGISTICS". Все права защищены.</p>
             </div>
         </div>
     </footer>

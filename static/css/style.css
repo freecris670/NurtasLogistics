@@ -137,6 +137,7 @@ section {
 .logo a {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 nav ul {
@@ -173,7 +174,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, rgba(20, 72, 135, 0.9), rgba(20, 72, 135, 0.7)), url('../images/backgroung.jpg') no-repeat center/cover;
+    background: linear-gradient(to right, rgba(20, 72, 135, 0.9), rgba(20, 72, 135, 0.7)), url('../static/images/backgroung.jpg') no-repeat center/cover;
     color: var(--light-color);
     height: 100vh;
     display: flex;
@@ -604,7 +605,20 @@ nav ul li a {
     width: auto;  /* Ширина подстроится автоматически для сохранения пропорций */
     display: block; /* Убирает возможные нижние отступы у inline-элементов */
     object-fit: contain; /* Гарантирует, что все изображение будет видно */
+    margin-right: 10px; /* Отступ между логотипом и текстом */
 }
+
+.logo-text {
+    font-size: 1.6rem; /* Размер текста логотипа */
+    font-weight: bold; /* Жирный шрифт */
+    color: var(--primary-color);
+    letter-spacing: var(--transition);
+}
+
+.logo a:hover .logo-text {
+    color: var(--accent-color);
+}
+
 
 /* Увеличиваем отступ под заголовком "О нас" */
 .about-section h2 {
