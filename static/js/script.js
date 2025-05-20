@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Create placemark
                 const placemark = new ymaps.Placemark(coords, {
-                    balloonContent: '<strong>SmartBuh</strong><br>г. Алматы, ул. Сатпаева, 76'
+                    balloonContent: '<strong>Best Logistics</strong><br>г. Алматы, ул. Сатпаева, 76'
                 }, {
                     preset: 'islands#blueFinanceIcon'
                 });

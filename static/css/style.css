@@ -138,6 +138,7 @@ section {
     display: flex;
     align-items: center;
     text-decoration: none;
+    write-space: nowrap;
 }
 
 nav ul {
@@ -155,6 +156,7 @@ nav ul li a {
 .contact-info {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 .phone {
@@ -174,7 +176,7 @@ nav ul li a {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(to right, rgba(20, 72, 135, 0.9), rgba(20, 72, 135, 0.7)), url('../static/images/backgroung.jpg') no-repeat center/cover;
+    background: linear-gradient(to right, rgba(20, 72, 135, 0.9), rgba(20, 72, 135, 0.7)), url('../images/background.png') no-repeat center/cover;
     color: var(--light-color);
     height: 100vh;
     display: flex;
@@ -275,7 +277,7 @@ nav ul li a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Устанавливаем 2 колонки равной ширины */
+    grid-template-columns: repeat(3, 1fr); /* Устанавливаем 3 колонки равной ширины */
     gap: 30px;
     margin-bottom: 50px;
 }
@@ -606,13 +608,14 @@ nav ul li a {
     display: block; /* Убирает возможные нижние отступы у inline-элементов */
     object-fit: contain; /* Гарантирует, что все изображение будет видно */
     margin-right: 10px; /* Отступ между логотипом и текстом */
-}
+} 
 
 .logo-text {
-    font-size: 1.6rem; /* Размер текста логотипа */
+    font-size: 1.4rem; /* Размер текста логотипа */
     font-weight: bold; /* Жирный шрифт */
     color: var(--primary-color);
     letter-spacing: var(--transition);
+    white-space: nowrap;
 }
 
 .logo a:hover .logo-text {
